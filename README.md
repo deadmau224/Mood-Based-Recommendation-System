@@ -11,3 +11,10 @@ The trained ML model is trained to distunguish between facial expressions of a p
 I am currently working on implementing the output to deliver media to the user based on the facial expression which translates to mood of the individual.
 
 The model accuracy and other outputs can be found in the documentation folder.
+
+
+Changelog v1.0:
+Step up open-cv and haar cascade classifiers to capture image via webcam.
+
+Changelog v2.0:
+Trained ML model to recognize emotions and synced it to feed images from the previous step in the code.
