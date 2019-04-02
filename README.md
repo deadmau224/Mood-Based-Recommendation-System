@@ -21,14 +21,14 @@ After I find the perfect model, I have to program it further to recommend media 
 Folders: Beta and Documentation
 
 Beta:
-= code.py: This is the main coe of the project.
-= imageai_training.py: This code is used to train the ML model.
-= imageai_predict.py: This is the prediction code used to employ the trained model.
-= opencv-setup.py: This code is to setup Open-cv, initially when I began.
+code.py: This is the main coe of the project.
+imageai_training.py: This code is used to train the ML model.
+imageai_predict.py: This is the prediction code used to employ the trained model.
+opencv-setup.py: This code is to setup Open-cv, initially when I began.
 
 Documentation:
-= 26/01/2019: Initial setting up of Open-cv and haarcascade frontal face alt2 classifier to detect faces and the outputs.
-= 01/04/2019: Output files of training model mentioned in changelog v2.0
+26/01/2019: Initial setting up of Open-cv and haarcascade frontal face alt2 classifier to detect faces and the outputs
+01/04/2019: Output files of training model mentioned in changelog v2.0.
 
 
 – Changelog v1.0:
