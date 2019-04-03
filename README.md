@@ -16,7 +16,7 @@ This picture is then fed to the trained model. I am using a library called 'imag
 
 After I find the perfect model, I have to program it further to recommend media to users based on their Facial Expressions (mood).
 
-– Navigation around this repository:
+– Navigating around this repository:
 
 Folders: Beta and Documentation
 
