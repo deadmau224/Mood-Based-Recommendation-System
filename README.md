@@ -29,10 +29,14 @@ opencv-setup.py: This code is to setup Open-cv, initially when I began.
 Documentation:
 26/01/2019: Initial setting up of Open-cv and haarcascade frontal face alt2 classifier to detect faces and the outputs
 01/04/2019: Output files of training model mentioned in changelog v2.0.
+03/04/2019: Output files of training model mentioned in changelog v2.1.
 
 
 – Changelog v1.0:
 Step up open-cv and haar cascade classifiers to capture image via webcam. This image is greyscale and ready to be fed as input to a Machine Learning model. The image is being saved as "image.png"
 
 – Changelog v2.0:
-Trained ML model to recognize emotions and synced it to feed images from the previous step in the code. This ML model has an efficiency of 68.28% and works on ResNet50 framework. It was trained at 10 epochs with batch size 32.
+Trained ML model to recognize emotions and synced it to feed images from the previous step in the code. This ML model has an efficiency of 68.28% and works on ResNet50 framework. It was trained at 10 epochs with batch size 32. I used the 10th epoch.
+
+– Changelog v2.1:
+Trained ML model to recognize emotions. This ML model has an efficiency of 73.23% and works on ResNet50 framework. It was trained at 30 epochs with batch size 32. I picked the 20th epoch since it had the highest efficiency.
