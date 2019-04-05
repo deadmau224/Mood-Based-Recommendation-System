@@ -30,7 +30,7 @@ opencv-setup.py: This code is to setup Open-cv, initially when I began.<br />
 
 Documentation:<br />
 26/01/2019: Initial setting up of Open-cv and haarcascade frontal face alt2 classifier to detect faces and the outputs.<br />
-01/04/2019: Output files of training model mentioned in changelog v2.0.<br />
+01/04/2019: Output files of training model mentioned in changelog v2.0. Output screenshot of happy & surprised facial expression detected in two different instances. resnetcompare.py was coded to compare DenseNet121 and ResNet50.<br />
 03/04/2019: Output files of training model mentioned in changelog v2.1.<br />
 05/04/2019: Output files of training model mentioned in changelog v2.2. Also added a comparison between ResNet50 and DenseNet121 architecture performance in prediction on the same image. It was noted that even though DenseNet121 model took a little more time, 3-4 seconds more to predict, the results were more accurate compared to the ResNet50 model.<br />
 
