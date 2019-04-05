@@ -47,16 +47,19 @@ cv2.destroyAllWindows()
 execution_path = os.getcwd() #Get current directory path
 
 prediction = CustomImagePrediction()
-prediction.setModelTypeAsResNet()
-prediction.setModelPath(os.path.join(execution_path, "model_ex-020_acc-0.732311.h5"))
+prediction.setModelTypeAsDenseNet()
+prediction.setModelPath(os.path.join(execution_path, "model_ex-017_acc-0.749134.h5"))
 prediction.setJsonPath(os.path.join(execution_path, "model_class.json"))
 prediction.loadModel(num_objects=5)
 
 predictions, probabilities = prediction.predictImage(os.path.join(execution_path, "image.png"), result_count=5)
 
+for eachPrediction, eachProbability in zip(predictions, probabilities):
+    print(eachPrediction + " : " + eachProbability)
+
 location_of_emo = probabilities.index(max(probabilities))
 emo = predictions[location_of_emo]
-print("\n\nYou are looking",predictions[location_of_emo],".")
+print("\n\nYou seem to be {}.".format(predictions[location_of_emo]))
 media_input = int_check(1,3,"\nWhat is it that you'd like to be recommended based on your mood?\n\n1. Images\n2. Songs\n3. Movies\n\nPlease enter the corresponding digit: ")
 
 if media_input==1: #Images
@@ -92,3 +95,5 @@ elif media_input==3: #Movies
         print("Yet to code.")
     elif emo=='surprised':
         print("Yet to code.")
+
+os.remove(os.path.join(execution_path,"image.png"))
