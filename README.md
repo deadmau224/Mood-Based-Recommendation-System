@@ -35,13 +35,13 @@ Documentation:<br />
 05/04/2019: Output files of training model mentioned in changelog v2.2. Also added a comparison between ResNet50 and DenseNet121 architecture performance in prediction on the same image. It was noted that even though DenseNet121 model took a little more time, 3-4 seconds more to predict, the results were more accurate compared to the ResNet50 model.<br />
 
 – Changelog v1.0:
-Step up open-cv and haar cascade classifiers to capture image via webcam. This image is greyscale and ready to be fed as input to a Machine Learning model. The image is being saved as "image.png"
+1. Step up open-cv and haar cascade classifiers to capture image via webcam. This image is greyscale and ready to be fed as input to a Machine Learning model. The image is being saved as "image.png"
 
 – Changelog v2.0:
-Trained ML model to recognize emotions and synced it to feed images from the previous step in the code. This ML model has an efficiency of 68.28% and works on ResNet50 framework. It was trained at 10 epochs with batch size 32. I used the 10th epoch.
+1. Trained ML model to recognize emotions and synced it to feed images from the previous step in the code. This ML model has an efficiency of 68.28% and works on ResNet50 framework. It was trained at 10 epochs with batch size 32. I used the 10th epoch.
 
 – Changelog v2.1:
-Trained ML model to recognize emotions. This ML model has an efficiency of 73.23% and works on ResNet50 framework. It was trained at 30 epochs with batch size 32. I picked the 20th epoch since it had the highest efficiency.
+1. Trained ML model to recognize emotions. This ML model has an efficiency of 73.23% and works on ResNet50 framework. It was trained at 30 epochs with batch size 32. I picked the 20th epoch since it had the highest efficiency.
 
 - Changelog v2.2:
 1. Trained ML model to recognize emotions. This ML model has an efficiency of 74.91% and works on DenseNet121 framework. It was trained at 30 epochs with batch size 32. I picked the 17th epoch since it had the highest efficiency.
