@@ -1,10 +1,10 @@
-# Mood-Based-Recommendation-System
+# Mood Based Recommendation System
 
 This is a project that I am working on in my final year of my Bachelor of Engineering undergraduate degree.
 
 - What does this project do?
 
-This is a Python3 coded mood based media recommendation system that employs Machine Learning, in specific deep learning TensorFlow and Keras algorithms to recognize a person's mood based on facial expression recognition (FER) and recommend media based on their mood to them.
+A Python3 coded mood based media recommendation system that employs Machine Learning, in specific deep learning TensorFlow and Keras algorithms based on DenseNet121 architecture, to recognize a person's mood based on facial expression and recommend media to them based on the same. It uses Haar Cascade Frontal Face classifier to detect a face that is fed to the trained Machine Learning model.
 
 Note: I have not included any dataset or trained model in this repository.
 
