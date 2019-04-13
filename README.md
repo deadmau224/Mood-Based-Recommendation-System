@@ -33,6 +33,7 @@ Documentation:<br />
 01/04/2019: Output files of training model mentioned in changelog v2.0. Output screenshot of happy & surprised facial expression detected in two different instances. resnetcompare.py was coded to compare DenseNet121 and ResNet50.<br />
 03/04/2019: Output files of training model mentioned in changelog v2.1.<br />
 05/04/2019: Output files of training model mentioned in changelog v2.2. Also added a comparison between ResNet50 and DenseNet121 architecture performance in prediction on the same image. It was noted that even though DenseNet121 model took a little more time, 3-4 seconds more to predict, the results were more accurate compared to the ResNet50 model.<br />
+07/04/2019: Output files of training model mentioned in changelog v2.3.<br />
 
 - Changelog v1.0:<br />
 Step up open-cv and haar cascade classifiers to capture image via webcam. This image is greyscale and ready to be fed as input to a Machine Learning model. The image is being saved as "image.png"<br />
@@ -46,3 +47,6 @@ Trained ML model to recognize emotions. This ML model has an efficiency of 73.23
 - Changelog v2.2:<br />
 1. Trained ML model to recognize emotions. This ML model has an efficiency of 74.91% and works on DenseNet121 framework. It was trained at 30 epochs with batch size 32. I picked the 17th epoch since it had the highest efficiency.
 2. Made a few changes in the code to delete generated image.
+
+- Changelog v2.3:<br />
+Trained ML model to recognize emotions. This ML model has an efficiency of 75.18% and works on DenseNet121 framework. It was trained at 50 epochs with batch size 32. I picked the 36th epoch since it had the highest efficiency.
