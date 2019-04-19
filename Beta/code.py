@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 from imageai.Prediction.Custom import CustomImagePrediction
 import os
+import webbrowser
 
 def make_720p(): #defining resolution to 720p
     cap.set(3, 1280)
@@ -48,52 +49,62 @@ execution_path = os.getcwd() #Get current directory path
 
 prediction = CustomImagePrediction()
 prediction.setModelTypeAsDenseNet()
-prediction.setModelPath(os.path.join(execution_path, "model_ex-017_acc-0.749134.h5"))
+prediction.setModelPath(os.path.join(execution_path, "model_ex-038_acc-0.761834.h5"))
 prediction.setJsonPath(os.path.join(execution_path, "model_class.json"))
 prediction.loadModel(num_objects=5)
 
 predictions, probabilities = prediction.predictImage(os.path.join(execution_path, "image.png"), result_count=5)
-
+print("\n\n")
+print("The Machine Learning model has the following outputs:\n\n")
+#print(predictions)
+#print(probabilities)
 for eachPrediction, eachProbability in zip(predictions, probabilities):
     print(eachPrediction + " : " + eachProbability)
 
 location_of_emo = probabilities.index(max(probabilities))
 emo = predictions[location_of_emo]
-print("\n\nYou seem to be {}.".format(predictions[location_of_emo]))
+print("\n\nYou seem to be {}.".format(emo))
 media_input = int_check(1,3,"\nWhat is it that you'd like to be recommended based on your mood?\n\n1. Images\n2. Songs\n3. Movies\n\nPlease enter the corresponding digit: ")
 
 if media_input==1: #Images
-    if emo=='happy':
-        print("Yet to code.")
-    elif emo=='sad':
-        print("Yet to code.")
-    elif emo=='angry':
-        print("Yet to code.")
-    elif emo=='calm':
-        print("Yet to code.")
-    elif emo=='surprised':
-        print("Yet to code.")
+    if emo=='happy': #done
+        webbrowser.open('https://www.buzzfeed.com/alexnaidus/laugh-therapy')
+    elif emo=='sad': #done
+        a = int_check(1,2,"\n\nWhat link would you like to view?\n1. 39 Pictures For Anyone Who Is Just Sad\n2. 42 Pictures That Will Make You Almost Too Happy\n\nPlease select a corresponding integer: ")
+        if a==1:
+            webbrowser.open('https://www.buzzfeed.com/kaelintully/bobby-flay-is-the-prince-of-sunshine-yes-yes-what-a-nice-boy')
+        elif a==2:
+            webbrowser.open('https://www.buzzfeed.com/kaelintully/someone-get-me-a-milano-bc-now-im-hungry')
+    elif emo=='angry': #done
+        a = int_check(1,2,"\n\nWhat link would you like to view?\n1. 21 Pictures That Will Definitely Make You Feel Better\n2. 28 Pictures That Will Help You Calm The Hell Down Today\n\nPlease select a corresponding integer: ")
+        if a==1:
+            webbrowser.open('https://www.buzzfeed.com/jessicamisener/it-gets-better')
+        elif a==2:
+            webbrowser.open('https://www.buzzfeed.com/daves4/pictures-that-will-help-you-get-over-your-intense')
+    elif emo=='calm': #done
+        a = int_check(1,2,"\n\nWhat link would you like to view?\n1. 24 Pictures For Anyone Who Needs A Little Visual Relaxation\n2. 16 Calming Websites That Will Put You At Ease\n\nPlease select a corresponding integer: ")
+        if a==1:
+            webbrowser.open('https://www.buzzfeed.com/jamiejones/sit-back-relax-and-let-these-pictures-soothe-your-soul')
+        elif a==2:
+            webbrowser.open('https://www.buzzfeed.com/anjalipatel/soothing-corners-of-the-internet-to-comfort-you-on-the-ba')
+    elif emo=='surprised': #done
+        webbrowser.open('https://www.buzzfeed.com/search?q=surprise')
+
 elif media_input==2: #Songs
     if emo=='happy':
-        print("Yet to code.")
+        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
     elif emo=='sad':
-        print("Yet to code.")
+        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
     elif emo=='angry':
-        print("Yet to code.")
+        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
     elif emo=='calm':
-        print("Yet to code.")
+        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
     elif emo=='surprised':
-        print("Yet to code.")
+        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
+
 elif media_input==3: #Movies
-    if emo=='happy':
-        print("Yet to code.")
-    elif emo=='sad':
-        print("Yet to code.")
-    elif emo=='angry':
-        print("Yet to code.")
-    elif emo=='calm':
-        print("Yet to code.")
-    elif emo=='surprised':
-        print("Yet to code.")
+    movie_keyword = input("\n\nWhat kind of genre do you like watching when you're {}?\nPlease type a keyword: ".format(emo))
+    webbrowser.open("https://www.netflix.com/search?q={}".format(movie_keyword))
+    
 
 os.remove(os.path.join(execution_path,"image.png"))

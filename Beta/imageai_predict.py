@@ -5,7 +5,7 @@ execution_path = os.getcwd()
 
 prediction = CustomImagePrediction()
 prediction.setModelTypeAsDenseNet()
-prediction.setModelPath(os.path.join(execution_path, "model_ex-017_acc-0.749134.h5"))
+prediction.setModelPath(os.path.join(execution_path, "model_ex-038_acc-0.761834.h5"))
 prediction.setJsonPath(os.path.join(execution_path, "model_class.json"))
 prediction.loadModel(num_objects=5)
 
