@@ -3,6 +3,16 @@ import cv2
 from imageai.Prediction.Custom import CustomImagePrediction
 import os
 import webbrowser
+import sys
+import csv
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
 
 def make_720p(): #defining resolution to 720p
     cap.set(3, 1280)
@@ -98,13 +108,15 @@ elif media_input==2: #Songs
     elif emo=='angry':
         webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
     elif emo=='calm':
-        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
+        webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX6VdMW310YC7')
     elif emo=='surprised':
         webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open('https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0')
 
 elif media_input==3: #Movies
     movie_keyword = input("\n\nWhat kind of genre do you like watching when you're {}?\nPlease type a keyword: ".format(emo))
+    with open('movies.csv','a') as f:
+        emowrite = csv.writer(f)
+        emowrite.writerow([emo,movie_keyword])
     webbrowser.open("https://www.netflix.com/search?q={}".format(movie_keyword))
     
-
 os.remove(os.path.join(execution_path,"image.png"))
