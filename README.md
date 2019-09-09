@@ -1,6 +1,6 @@
 # Mood Based Recommendation System
 
-This is a project that I am working on in my final year of my Bachelor of Engineering undergraduate degree.
+This is a project that I worked on in my senior year of my Bachelor of Engineering undergraduate degree.
 
 - What does this project do?
 
