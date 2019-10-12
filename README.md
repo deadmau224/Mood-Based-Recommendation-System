@@ -61,3 +61,6 @@ Trained ML model to recognize emotions. This ML model has an testing accuracy of
 
 - Changelog v2.4:<br />
 Trained ML model to recognize emotions. This ML model has an testing accuracy of 76.18% and works on DenseNet121 framework. It was trained at 50 epochs with batch size 32. I picked the 38th epoch since it had the highest testing accuracy. 
+
+- Changelog v2.5:<br />
+Minor fixes and fixed reproducibility issues.
