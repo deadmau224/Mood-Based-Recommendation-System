@@ -21,8 +21,6 @@ It's been programmed to recommend some media.
 
 ## Navigating around this repository:
 
-Folders: Beta, Documentation & Install This ImageAI.whl<br />
-
 Beta:<br />
 code.py: This is the main code of the project and you can run this. Please download all the libraries before running the code.<br />
 imageai_training.py: This code is used to train the ML model.<br />
@@ -40,6 +38,10 @@ Documentation:<br />
 ### NOTE:
 Install This ImageAI.whl<br />
 imageai-2.0.2-py3-none-any.whl - Install this whl using pip install/conda install for the code to run. 
+
+Blackbook: This is the black book, I created for my project presentation during my undergrad.
+
+Please ignore the files that have not been mentioned in this ReadME, since those are files I have chunks of code for future use or used for testing purposes.
 
 ## Changelog:
 
@@ -64,3 +66,6 @@ Trained ML model to recognize emotions. This ML model has an testing accuracy of
 
 - Changelog v2.5:<br />
 Minor fixes and fixed reproducibility issues.
+
+- Changelog v2.5.1:<br />
+Added Blackbook.
