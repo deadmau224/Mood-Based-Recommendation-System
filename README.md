@@ -2,28 +2,29 @@
 
 This is a project that I worked on in my senior year of my Bachelor of Engineering undergraduate degree.
 
-- What does this project do?
+## What does this project do?
 
 A Python3 coded mood based media recommendation system that employs Machine Learning, in specific deep learning TensorFlow and Keras algorithms based on DenseNet121 architecture, to recognize a person's mood based on facial expression and recommend media to them based on the same. It uses Haar Cascade Frontal Face classifier to detect a face that is fed to the trained Machine Learning model.
 
-Note: I have not included any dataset or trained model in this repository.
-
 All my models have been trained on Google Colab.
 
-- What is happening?
+### NOTE:
+The trained model used in the code is in the Beta folder while other trained models are in the Documentation folder with date-tagged folders. I have not included the FER dataset that I trained the models on.
+
+## What is happening?
 
 An 'image.png' file is created using open-cv. This file contains the face of the user with the captured facial expression when the user pushes a key. This picture is taken while a live webcam feed can be viewed by the user.
 
 This picture is then fed to the trained model. I am using a library called 'imageAI' to train my model which employs Python3 Machine Learning libraries, Tensorflow for the backend and Keras. The model in changelog v2.0 employs a ResNet50 framework of Convolutional Neural Networks. It has an accuracy of 68.28% and was trained for 10 epochs. I trained a model for 30 epochs with ResNet50 architecture and gained a maximum accuracy of 73.23%. I decided to try out the DenseNet121 architecture as well, so I trained a model for 30 epochs and received an accuracy of 74.91%. The noticable difference I could see is that the file size of the DenseNet model was 3 times lesser (30Mb) compared to the ResNet model (92Mb). The time taken to process the DenseNet model was a little more compared to ResNet model. The current training accuracy (at changelog v2.4, 14/04/2019) on a DenseNet121 model is 76.18%, eventhough the file size of the DenseNet121 trained model is much lesser compared to ResNet50 models, it takes a lot of time to process the image. Thinking of going back to ResNet50 model if accuracy isn't hampered to an extent. Training one currently at 50 epochs.
 
-Now I have to program it to deliver media based on the FER.
+It's been programmed to recommend some media.
 
-- Navigating around this repository:
+## Navigating around this repository:
 
-Folders: Beta and Documentation<br />
+Folders: Beta, Documentation & Install This ImageAI.whl<br />
 
 Beta:<br />
-code.py: This is the main code of the project.<br />
+code.py: This is the main code of the project and you can run this. Please download all the libraries before running the code.<br />
 imageai_training.py: This code is used to train the ML model.<br />
 imageai_predict.py: This is the prediction code used to employ the trained model.<br />
 opencv-setup.py: This code is to setup Open-cv, initially when I began.<br />
@@ -35,6 +36,12 @@ Documentation:<br />
 05/04/2019: Output files of training model mentioned in changelog v2.2. Also added a comparison between ResNet50 and DenseNet121 architecture performance in prediction on the same image. It was noted that even though DenseNet121 model took a little more time, 3-4 seconds more to predict, the results were more accurate compared to the ResNet50 model.<br />
 07/04/2019: Output files of training model mentioned in changelog v2.3.<br />
 14/04/2019: Output files of training model mentioned in changelog v2.4.<br />
+
+### NOTE:
+Install This ImageAI.whl<br />
+imageai-2.0.2-py3-none-any.whl - Install this whl using pip install/conda install for the code to run. 
+
+## Changelog:
 
 - Changelog v1.0:<br />
 Step up open-cv and haar cascade classifiers to capture image via webcam. This image is greyscale and ready to be fed as input to a Machine Learning model. The image is being saved as "image.png"<br />

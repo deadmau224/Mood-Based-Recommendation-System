@@ -14,6 +14,9 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense
 
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 def make_720p(): #defining resolution to 720p
     cap.set(3, 1280)
     cap.set(4, 720)
@@ -32,7 +35,8 @@ def int_check(l,h,message): #for inputting integers
 
 #Capturing Face
 
-face_cascade = cv2.CascadeClassifier('/usr/local/Cellar/opencv//4.0.1/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml')
+#face_cascade = cv2.CascadeClassifier('/usr/local/Cellar/opencv//4.0.1/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt2.xml')
 cap = cv2.VideoCapture(0)
 make_720p()
 while(True): #Capture frame-by-frame
@@ -65,7 +69,7 @@ prediction.loadModel(num_objects=5)
 
 predictions, probabilities = prediction.predictImage(os.path.join(execution_path, "image.png"), result_count=5)
 print("\n\n")
-print("The Machine Learning model has the following outputs:\n\n")
+print("The model has the following outputs:\n\n")
 #print(predictions)
 #print(probabilities)
 for eachPrediction, eachProbability in zip(predictions, probabilities):
